@@ -1,0 +1,13 @@
+syntax = "proto3";
+
+package pingpong;
+option go_package = "./pingpong";
+
+
+message Message {
+    string id = 1;
+}
+
+service PingService {
+    rpc PingNext(Message) returns (Message) {}
+}
